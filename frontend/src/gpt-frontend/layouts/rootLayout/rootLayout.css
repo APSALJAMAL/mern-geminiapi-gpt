@@ -1,0 +1,50 @@
+.rootLayout {
+  padding: 16px 64px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 8px;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.navigation {
+  margin-left: auto; /* Push the navigation to the right */
+  display: flex;
+  gap: 16px; /* Add space between the navigation links */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.user {
+  margin-left: 1.5rem; /* Space between user section and navigation */
+}
+
+main {
+  flex: 1;
+  overflow: hidden;
+}

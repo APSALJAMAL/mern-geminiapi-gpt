@@ -1,0 +1,27 @@
+
+MONGO=mongodb
+
+IMAGE_KIT_ENDPOINT=
+IMAGE_KIT_PUBLIC_KEY=
+IMAGE_KIT_PRIVATE_KEY=
+
+
+CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+
+CLIENT_URL=http://localhost:5173
+
+
+import * as chatController from "./gpt-backend/controllers/chat.controller.js";
+import * as userChatsController from "./gpt-backend/controllers/userchats.controller.js";
+
+app.get("/api/upload", chatController.getUploadParams);
+app.post("/api/chats", ClerkExpressRequireAuth(), chatController.createChat);
+app.get("/api/userchats", ClerkExpressRequireAuth(), userChatsController.getUserChats);
+app.get("/api/chats/:id", ClerkExpressRequireAuth(), chatController.getChatById);
+app.put("/api/chats/:id", ClerkExpressRequireAuth(), chatController.updateChat);
+
+
+
+
+
